@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import css from './Cast.module.css';
 import Loader from 'components/Loader/Loader';
+import softScroll from 'components/softScroll';
 
 const Cast = () => {
   const [castList, setCastList] = useState(null);
@@ -17,6 +18,7 @@ const Cast = () => {
       if (data.cast) {
         setIsLoading(false);
         setCastList(data.cast);
+        softScroll();
       }
     } catch (error) {
       console.log(error.message);

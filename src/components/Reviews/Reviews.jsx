@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Loader from 'components/Loader/Loader';
 import css from './Reviews.module.css';
+import softScroll from 'components/softScroll';
 
 const Reviews = () => {
   const [review, setReview] = useState([]);
@@ -16,6 +17,7 @@ const Reviews = () => {
       if (data.results) {
         setIsLoading(false);
         setReview(data.results);
+        softScroll();
       }
     } catch (error) {
       console.log(error.message);
