@@ -18,8 +18,9 @@ const Cast = () => {
       if (data.cast) {
         setIsLoading(false);
         setCastList(data.cast);
-        softScroll();
+        //softScroll();
       }
+      softScroll();
     } catch (error) {
       console.log(error.message);
     }
