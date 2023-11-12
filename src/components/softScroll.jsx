@@ -1,6 +1,6 @@
 function softScroll() {
   window.scrollBy({
-    top: 1000,
+    top: 2000,
     behavior: 'smooth',
   });
 }
