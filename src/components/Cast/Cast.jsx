@@ -7,7 +7,6 @@ import Loader from 'components/Loader/Loader';
 
 const Cast = () => {
   const [castList, setCastList] = useState(null);
-  const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const { movieId } = useParams();
 
@@ -20,13 +19,13 @@ const Cast = () => {
         setCastList(data.cast);
       }
     } catch (error) {
-      setError(error.message);
+      console.log(error.message);
     }
   };
 
   useEffect(() => {
     castMovies(movieId);
-  }, [movieId]);
+  }, []);
 
   return (
     <div>

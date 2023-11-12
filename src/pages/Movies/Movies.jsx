@@ -9,7 +9,6 @@ import Notiflix from 'notiflix';
 const MoviesPage = () => {
   const [searchMoviesList, setSearchMoviesList] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
   const [searchParams, setSearchParams] = useSearchParams();
   const queryValue = searchParams.get('query');
   const location = useLocation();
@@ -41,7 +40,7 @@ const MoviesPage = () => {
         //alert('Nothing found for your search! Please enter another query!');
       }
     } catch (error) {
-      setError(error.message);
+      console.log(error.message);
     }
   };
 

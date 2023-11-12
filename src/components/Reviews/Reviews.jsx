@@ -6,7 +6,6 @@ import css from './Reviews.module.css';
 
 const Reviews = () => {
   const [review, setReview] = useState([]);
-  const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const { movieId } = useParams('movieId');
 
@@ -19,7 +18,7 @@ const Reviews = () => {
         setReview(data.results);
       }
     } catch (error) {
-      setError(error.message);
+      console.log(error.message);
     }
   };
 

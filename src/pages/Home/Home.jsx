@@ -8,7 +8,6 @@ import Loader from 'components/Loader/Loader';
 const HomePage = () => {
   const [movieList, setMovieList] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
   const location = useLocation();
 
   const listTrendMovies = async () => {
@@ -20,7 +19,7 @@ const HomePage = () => {
         setMovieList(data.results);
       }
     } catch (error) {
-      setError(error.message);
+      console.log(error.message);
     }
   };
 

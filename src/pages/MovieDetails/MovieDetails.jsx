@@ -10,7 +10,6 @@ import Notiflix from 'notiflix';
 const MovieDetails = () => {
   const [detailsMovie, setDetailsMovie] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
   const { movieId } = useParams();
   const location = useLocation();
   const backLinkHref = location.state?.from ?? '/';
@@ -24,7 +23,6 @@ const MovieDetails = () => {
         setDetailsMovie(data);
       }
     } catch (error) {
-      setError(error.message);
       //alert('Error 404 - Information for this movie not found!');
       Notiflix.Notify.failure('Information for this movie not found!', {
         position: 'center-center',
