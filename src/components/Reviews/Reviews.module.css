@@ -1,0 +1,10 @@
+.review_cont {
+  padding-right: 30px;
+  display: flex;
+   justify-content: space-between;
+  }
+
+  .review_text {
+    margin-left: 20px;
+    font-style: oblique;
+  }
