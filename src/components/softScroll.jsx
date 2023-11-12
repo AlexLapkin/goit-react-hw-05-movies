@@ -1,5 +1,5 @@
 function softScroll() {
-  window.scrollY({
+  window.scrollTo({
     top: 500,
     behavior: 'smooth',
   });
