@@ -10,7 +10,7 @@ const Cast = () => {
   const [isLoading, setIsLoading] = useState(false);
   const { movieId } = useParams();
 
-  const castMovies = async () => {
+  const castMovies = async movieId => {
     setIsLoading(true);
     try {
       const { data } = await fetchMovieCredits(movieId);
@@ -25,7 +25,7 @@ const Cast = () => {
 
   useEffect(() => {
     castMovies(movieId);
-  }, []);
+  }, [movieId]);
 
   return (
     <div>
