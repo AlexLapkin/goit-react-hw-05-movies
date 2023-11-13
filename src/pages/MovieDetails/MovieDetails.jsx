@@ -7,6 +7,11 @@ import Loader from 'components/Loader/Loader';
 import css from './MovieDetails.module.css';
 import Notiflix from 'notiflix';
 
+let activeClassName = {
+  color: 'white',
+  backgroundColor: 'blue',
+};
+
 const MovieDetails = () => {
   const [detailsMovie, setDetailsMovie] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -70,12 +75,24 @@ const MovieDetails = () => {
           <h3 className={css.cont_add_title}>Additional information</h3>
           <ul className={css.cont_add}>
             <li className={css.cont_add_link}>
-              <NavLink className={css.nav_link} to="cast">
+              <NavLink
+                className={css.nav_link}
+                to="cast"
+                style={({ isActive }) =>
+                  isActive ? activeClassName : undefined
+                }
+              >
                 Cast
               </NavLink>
             </li>
             <li className={css.cont_add_link}>
-              <NavLink className={css.nav_link} to="reviews">
+              <NavLink
+                className={css.nav_link}
+                to="reviews"
+                style={({ isActive }) =>
+                  isActive ? activeClassName : undefined
+                }
+              >
                 Reviews
               </NavLink>
             </li>

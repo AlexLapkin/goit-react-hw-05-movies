@@ -35,8 +35,8 @@ const Reviews = () => {
         <>
           {review.length > 0 ? (
             <ul>
-              {review.map(({ author, content }) => (
-                <li>
+              {review.map(({ author, content, id }) => (
+                <li key={id}>
                   <h3>Author: {author}</h3>
                   <p className={css.review_cont}>{content}</p>
                 </li>

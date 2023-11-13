@@ -10,6 +10,10 @@
     padding-top: 5px;
  } 
 
+ .nav_link:hover {
+   background-color: blue;
+ }
+
 .cont_movie {
   display: flex;
   padding-top: 20px; 
@@ -50,6 +54,11 @@
     color: rgb(121, 39, 39);
     padding-top: 7px;
     border: 1px solid rgba(0, 0, 0, 0.226);
+    }
+
+    .cont_link:hover {
+        color:white;
+        background-color: rgb(190, 97, 97);
     }
 
 .cont_movie_add {

@@ -1,0 +1,18 @@
+.mov_ul_title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mov_title {
+    text-decoration: none;
+    color: rgb(14, 11, 11);
+    font-style: italic;
+    font-weight: 500;
+        }
+
+.mov_title:hover {
+    color: blue;
+   text-decoration: underline;
+   }
+

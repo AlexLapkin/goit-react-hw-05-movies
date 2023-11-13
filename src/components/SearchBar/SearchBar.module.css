@@ -1,0 +1,31 @@
+.searchbar {
+    top: 0;
+    left: 0;
+    position: sticky;
+    z-index: 1100;
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    padding-right: 24px;
+    padding-left: 24px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    color: #fff;
+      box-shadow: 
+       0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .searchbar_btn {
+     width: 70px;
+     height: 25px;
+     border: none;
+     background-color: blue;
+     color: white;
+     border-radius: 2px;
+  }
+
+  .searchbar_input {
+    width: 160px;
+    height: 20px; 
+  }
