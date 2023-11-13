@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 const MovieListItem = ({ title, name, id }) => {
   const location = useLocation();
-  console.log(location);
+
   return (
     <li key={id}>
       <NavLink
