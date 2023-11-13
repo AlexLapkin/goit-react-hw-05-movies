@@ -78,6 +78,7 @@ const MovieDetails = () => {
               <NavLink
                 className={css.nav_link}
                 to="cast"
+                state={location.state}
                 style={({ isActive }) =>
                   isActive ? activeClassName : undefined
                 }
@@ -89,6 +90,7 @@ const MovieDetails = () => {
               <NavLink
                 className={css.nav_link}
                 to="reviews"
+                state={location.state}
                 style={({ isActive }) =>
                   isActive ? activeClassName : undefined
                 }
