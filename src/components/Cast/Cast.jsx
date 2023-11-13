@@ -7,7 +7,7 @@ import Loader from 'components/Loader/Loader';
 import softScroll from 'components/softScroll';
 
 const Cast = () => {
-  const [castList, setCastList] = useState(null);
+  const [castList, setCastList] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const { movieId } = useParams();
 
@@ -32,20 +32,29 @@ const Cast = () => {
   return (
     <div>
       {isLoading && <Loader />}
-      <ul className={css.cast_list}>
-        {castList !== null &&
-          castList.map(({ profile_path, name, character, id }) => (
-            <li className={css.cast_item} key={id}>
-              <img
-                className={css.cast_img}
-                src={'https://www.themoviedb.org/t/p/w300' + profile_path}
-                alt={name}
-              ></img>
-              <p className={css.cast_text}>Name: {name}</p>
-              <p className={css.cast_text}>Character: {character}</p>
-            </li>
-          ))}
-      </ul>
+      {!isLoading && (
+        <>
+          {castList.length > 0 ? (
+            <ul className={css.cast_list}>
+              {castList.map(({ profile_path, name, character, id }) => (
+                <li className={css.cast_item} key={id}>
+                  <img
+                    className={css.cast_img}
+                    src={'https://www.themoviedb.org/t/p/w300' + profile_path}
+                    alt={name}
+                  ></img>
+                  <p className={css.cast_text}>Name: {name}</p>
+                  <p className={css.cast_text}>Character: {character}</p>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className={css.cast_text_add}>
+              We don't have information of cast for this movies!
+            </p>
+          )}
+        </>
+      )}
     </div>
   );
 };

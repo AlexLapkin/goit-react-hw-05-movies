@@ -22,3 +22,8 @@
 .cast_text {
     font-size: 16px;
 }
+
+.cast_text_add {
+    margin-left: 20px;
+    font-style: oblique;
+}
