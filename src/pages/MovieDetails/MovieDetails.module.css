@@ -7,25 +7,25 @@
     background-color: gray;
     border-radius: 5px;
     text-align: center;
-    padding-top: 5px;
- } 
+    padding-top: 6px;
+    margin-top: -10px;
+  } 
 
  .nav_link:hover {
-   background-color: blue;
+   background-color: rgb(195, 0, 255);
  }
 
 .cont_movie {
   display: flex;
   padding-top: 20px; 
-  margin-left: 30px; 
-}
+  justify-content: center;
+  }
 
 .cont_movie_overview {
     padding-left: 30px;
-    margin-top: 55px;
+    padding-top: 20px;
     width: 800px;
-    box-shadow: 
-       0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     }
 
 .cont_add {
@@ -34,8 +34,7 @@
     gap: 30px;
     padding-left: 70px;
     padding-bottom: 20px; 
-  border-bottom: 2px solid gray;
-    }
+   }
 
 .cont_add_link {
     list-style: none;
@@ -48,9 +47,9 @@
     width: 80px;
     height: 30px;
     text-align: center;
-    margin-left: 30px;
+    margin-left: 70px;
     margin-bottom: 20px;
-    background-color: white;
+    background-color: rgb(230, 214, 214);
     color: rgb(121, 39, 39);
     padding-top: 7px;
     border: 1px solid rgba(0, 0, 0, 0.226);
@@ -63,15 +62,54 @@
 
 .cont_movie_add {
    display: flex;
-   flex-direction: column; 
+   flex-direction: column;    
 }
 
 .mov_img {
     display: block;
     width: 300px;
     height: 450px;
+    border-radius: 10px;
 }
 
 .cont_add_title {
     margin-left: 70px;
+    }
+
+.cont_movie_text {
+    padding-left: 5px;
+    color: gray;
+    margin-top: -10px;
+}
+
+.cont_add_cont {
+    display: flex;
+    flex-direction: column;
+    margin-left: 170px;
+    margin-right: 170px;
+    }
+
+.cont_movie_overview_add {
+    display: flex;
+    padding-left: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-right: 20px;
+    border-radius: 10px;
+    box-shadow: 
+       0px 1px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.cont_movie_text_add {
+    display: flex;
+    align-items: center;
+}
+
+.cont_movie_overview_span {
+ background-color: rgb(255, 208, 0);
+ border-radius: 5px;
+}
+
+.cont_movie_text_add1 {
+    margin-left: 10px;
 }

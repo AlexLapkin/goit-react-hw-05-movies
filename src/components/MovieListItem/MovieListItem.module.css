@@ -4,7 +4,7 @@
     gap: 10px;
     }
 
-.mov_title {
+ .mov_title {
     display: flex;
     flex-direction: column;
     /*--justify-content: center;--*/
@@ -12,10 +12,10 @@
     text-decoration: none;
     color: rgb(14, 11, 11);
     font-weight: 500;
-    
     height: 550px;
+    border-radius: 10px;
     box-shadow: 
-    0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+    0px 1px 10px 0px rgba(0, 0, 0, 0.3);
     
         }
 
@@ -34,11 +34,12 @@
 
     .mov_title_img {
         display: block;
-        padding-top: 15px;
+        margin-top: 25px;
         width: 300px;
         height: 450px;
+        border-radius: 10px;
     }
 
-    .mov_item {
-       
-    }
+.mov_item {
+    border-radius: 10px;
+  }

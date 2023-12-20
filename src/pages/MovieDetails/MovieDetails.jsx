@@ -54,51 +54,65 @@ const MovieDetails = () => {
               <NavLink className={css.cont_link} to={backLinkHref}>
                 Go back
               </NavLink>
-              <img
-                className={css.mov_img}
-                src={'https://www.themoviedb.org/t/p/w300' + poster_path}
-                alt="Poster"
-              ></img>
-            </div>
-            <div className={css.cont_movie_overview}>
-              <h2>
-                {title} ({release_date.slice(0, 4)})
-              </h2>
-              <p>Popularity: {popularity}</p>
-              <h3>Overview</h3>
-              <p>{overview}</p>
-              <h3>Genres</h3>
-              <p>{genres.map(({ name }) => name).join(' ')}</p>
+              <div className={css.cont_movie_overview_add}>
+                <img
+                  className={css.mov_img}
+                  src={'https://www.themoviedb.org/t/p/w300' + poster_path}
+                  alt="Poster"
+                ></img>
+
+                <div className={css.cont_movie_overview}>
+                  <h2>
+                    {title} ({release_date.slice(0, 4)})
+                  </h2>
+                  <p>
+                    Popularity:{' '}
+                    <span className={css.cont_movie_overview_span}>
+                      {popularity}
+                    </span>
+                  </p>
+                  <h3>Overview</h3>
+                  <p className={css.cont_movie_text}>{overview}</p>
+                  <div className={css.cont_movie_text_add}>
+                    <h3>Genres:</h3>
+                    <p className={css.cont_movie_text_add1}>
+                      {genres.map(({ name }) => name).join(', ')}
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <h3 className={css.cont_add_title}>Additional information</h3>
-          <ul className={css.cont_add}>
-            <li className={css.cont_add_link}>
-              <NavLink
-                className={css.nav_link}
-                to="cast"
-                state={location.state}
-                style={({ isActive }) =>
-                  isActive ? activeClassName : undefined
-                }
-              >
-                Cast
-              </NavLink>
-            </li>
-            <li className={css.cont_add_link}>
-              <NavLink
-                className={css.nav_link}
-                to="reviews"
-                state={location.state}
-                style={({ isActive }) =>
-                  isActive ? activeClassName : undefined
-                }
-              >
-                Reviews
-              </NavLink>
-            </li>
-          </ul>
+          <div className={css.cont_add_cont}>
+            <h3 className={css.cont_add_title}>Additional information</h3>
+            <ul className={css.cont_add}>
+              <li className={css.cont_add_link}>
+                <NavLink
+                  className={css.nav_link}
+                  to="cast"
+                  state={location.state}
+                  style={({ isActive }) =>
+                    isActive ? activeClassName : undefined
+                  }
+                >
+                  Cast
+                </NavLink>
+              </li>
+              <li className={css.cont_add_link}>
+                <NavLink
+                  className={css.nav_link}
+                  to="reviews"
+                  state={location.state}
+                  style={({ isActive }) =>
+                    isActive ? activeClassName : undefined
+                  }
+                >
+                  Reviews
+                </NavLink>
+              </li>
+            </ul>
+          </div>
 
           <Suspense fallback={<Loader />}>
             <Outlet />
