@@ -85,9 +85,9 @@
 .cont_add_cont {
     display: flex;
     flex-direction: column;
-    margin-left: 170px;
-    margin-right: 170px;
-    }
+    align-items: center;
+    border-bottom: 2px solid rgba(70, 68, 68, 0.5)
+        }
 
 .cont_movie_overview_add {
     display: flex;
