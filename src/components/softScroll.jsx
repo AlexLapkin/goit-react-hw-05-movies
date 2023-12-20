@@ -1,6 +1,6 @@
 const softScroll = () => {
   window.scrollBy({
-    top: 700,
+    top: 500,
     behavior: 'smooth',
   });
 };

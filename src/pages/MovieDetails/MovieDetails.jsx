@@ -41,7 +41,7 @@ const MovieDetails = () => {
     getDetailsMovie(movieId);
   }, [movieId]);
 
-  const { title, overview, genres, poster_path, release_date, popularity } =
+  const { title, overview, genres, poster_path, release_date, vote_average } =
     detailsMovie ?? {};
 
   return (
@@ -66,9 +66,9 @@ const MovieDetails = () => {
                     {title} ({release_date.slice(0, 4)})
                   </h2>
                   <p>
-                    Popularity:{' '}
+                    Vote_average:{' '}
                     <span className={css.cont_movie_overview_span}>
-                      {popularity}
+                      {vote_average}
                     </span>
                   </p>
                   <h3>Overview</h3>
