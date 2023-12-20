@@ -40,7 +40,13 @@ const Cast = () => {
                 <li className={css.cast_item} key={id}>
                   <img
                     className={css.cast_img}
-                    src={'https://www.themoviedb.org/t/p/w300' + profile_path}
+                    src={`${
+                      profile_path
+                        ? 'https://www.themoviedb.org/t/p/w300' + profile_path
+                        : 'https://via.placeholder.com/300x450' +
+                          '?text=' +
+                          name
+                    }`}
                     alt={name}
                   ></img>
                   <p className={css.cast_text}>Name: {name}</p>
